@@ -475,7 +475,7 @@ that&nbsp;will&nbsp;be&nbsp;utilized&nbsp;to&nbsp;get&nbsp;to&nbsp;the&nbsp;sing
 XML&nbsp;tags.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
-None&nbsp;if&nbsp;no&nbsp;entry&nbsp;XML&nbsp;tags&nbsp;are&nbsp;found.<br>
+<br>
 List&nbsp;representing&nbsp;all&nbsp;entry&nbsp;keys&nbsp;found&nbsp;within&nbsp;the&nbsp;elementstring.<br>
 string&nbsp;representing&nbsp;an&nbsp;entry&nbsp;key&nbsp;if&nbsp;only&nbsp;one&nbsp;is&nbsp;found<br>
 within&nbsp;the&nbsp;elementstring.<br>
@@ -483,36 +483,27 @@ within&nbsp;the&nbsp;elementstring.<br>
 Restriction(s):<br>
 This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Class&nbsp;Method</tt></dd></dl>
 
-<hr>
-Data descriptors inherited from <a href="siteinfo.html#Site">Site</a>:<br>
+<hr>dat_script inherit<a href="siteinfo.html#Site">Site</a>:<br>
 <dl><dt><strong>APIKey</strong></dt>
-<dd><tt>Determines&nbsp;if&nbsp;an&nbsp;APIKey&nbsp;was&nbsp;set&nbsp;for&nbsp;this&nbsp;specific&nbsp;site.<br>
-Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;APIKey&nbsp;using&nbsp;the<br>
-_apikey&nbsp;instance&nbsp;variable&nbsp;or&nbsp;returns&nbsp;None&nbsp;if&nbsp;the&nbsp;instance<br>
-variable&nbsp;is&nbsp;empty&nbsp;or&nbsp;not&nbsp;set.<br>
-&nbsp;<br>
+<dd><tt>If APIKey set for site. Return string {APIKey} use _apikey instance var or return None if instance var empty or NaN.
 arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
-string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;APIKey&nbsp;from&nbsp;the&nbsp;_apikey<br>
-instance&nbsp;variable.<br>
-&nbsp;<br>
+string&nbsp;--represent APIKey from _apikey instance var<br>
+
 Restriction(s):<br>
-This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
+This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;Property.</tt></dd>
 </dl>
-<dl><dt><strong>ErrorMessage</strong></dt>
-<dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Error&nbsp;Message.<br>
-&nbsp;<br>
+<dl><dt><strong>ERR_MSG</strong></dt>
+<dd><tt>Return String Represent Error Message.
 arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
-string&nbsp;--&nbsp;representing&nbsp;the&nbsp;error&nbsp;message&nbsp;to&nbsp;print&nbsp;to<br>
+string&nbsp;--&nbsp;Error Message print standard output.<br>
 the&nbsp;standard&nbsp;output.<br>
 &nbsp;<br>
 Restriction(s):<br>
-This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
+This&nbsp;Method&nbsp;is&nbsp;tagged Property.</tt></dd>
 </dl>
 <dl><dt><strong>FriendlyName</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;a&nbsp;friendly&nbsp;string&nbsp;name.<br>
@@ -531,15 +522,11 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 domain&nbsp;URL&nbsp;plus&nbsp;querystrings&nbsp;and&nbsp;other&nbsp;information&nbsp;required<br>
 to&nbsp;retrieve&nbsp;the&nbsp;information&nbsp;being&nbsp;investigated.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
-string&nbsp;--&nbsp;representing&nbsp;the&nbsp;full&nbsp;URL&nbsp;of&nbsp;the&nbsp;site&nbsp;including<br>
-querystring&nbsp;information&nbsp;and&nbsp;any&nbsp;other&nbsp;info&nbsp;required.<br>
+string&nbsp;-- represent URL site to include queryString info required.<br>
 &nbsp;<br>
 Restriction(s):<br>
-This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
+This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;Property.</tt></dd>
 </dl>
 <dl><dt><strong>Headers</strong></dt>
 <dd><tt>Determines&nbsp;if&nbsp;Headers&nbsp;were&nbsp;set&nbsp;for&nbsp;this&nbsp;specific&nbsp;site.<br>
@@ -547,8 +534,7 @@ Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Headers&nbsp;using&
 _headers&nbsp;instance&nbsp;variable&nbsp;or&nbsp;returns&nbsp;None&nbsp;if&nbsp;the&nbsp;instance<br>
 variable&nbsp;is&nbsp;empty&nbsp;or&nbsp;not&nbsp;set.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
+
 &nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;Headers&nbsp;from&nbsp;the&nbsp;_headers<br>
@@ -562,9 +548,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 that&nbsp;the&nbsp;user&nbsp;wants&nbsp;the&nbsp;site&nbsp;to&nbsp;report.&nbsp;This&nbsp;is&nbsp;set&nbsp;using<br>
 the&nbsp;sites.xml&nbsp;config&nbsp;file&nbsp;in&nbsp;the&nbsp;importantproperty&nbsp;XML&nbsp;tag.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;important&nbsp;property&nbsp;of&nbsp;the&nbsp;site<br>
 that&nbsp;needs&nbsp;to&nbsp;be&nbsp;reported.<br>
@@ -575,8 +559,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>MessageToPost</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;a&nbsp;message&nbsp;to&nbsp;the&nbsp;user.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
+
 &nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;a&nbsp;message&nbsp;to&nbsp;print&nbsp;to<br>
@@ -591,8 +574,7 @@ Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Parameters&nbsp;usi
 _params&nbsp;instance&nbsp;variable&nbsp;or&nbsp;returns&nbsp;None&nbsp;if&nbsp;the&nbsp;instance<br>
 variable&nbsp;is&nbsp;empty&nbsp;or&nbsp;not&nbsp;set.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
+
 &nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;Parameters&nbsp;from&nbsp;the&nbsp;_params<br>
@@ -604,9 +586,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>Proxy</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;proxy&nbsp;used.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;proxy&nbsp;used<br>
 &nbsp;<br>
@@ -616,9 +595,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>RegEx</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;a&nbsp;regular&nbsp;expression<br>
 required&nbsp;to&nbsp;retrieve&nbsp;the&nbsp;information&nbsp;being&nbsp;investigated.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;a&nbsp;regex&nbsp;used&nbsp;to&nbsp;find&nbsp;info&nbsp;on&nbsp;the&nbsp;site.<br>
@@ -631,9 +607,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 precedes&nbsp;reporting&nbsp;information&nbsp;so&nbsp;the&nbsp;user&nbsp;knows&nbsp;what<br>
 specifics&nbsp;are&nbsp;being&nbsp;found.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;a&nbsp;tag&nbsp;for&nbsp;reporting&nbsp;information.<br>
 &nbsp;<br>
@@ -643,10 +616,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>Results</strong></dt>
 <dd><tt>Checks&nbsp;the&nbsp;instance&nbsp;variable&nbsp;_results&nbsp;is&nbsp;empty&nbsp;or&nbsp;None.<br>
 Returns&nbsp;_results&nbsp;(the&nbsp;results&nbsp;list)&nbsp;or&nbsp;None&nbsp;if&nbsp;it&nbsp;is&nbsp;empty.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 list&nbsp;--&nbsp;list&nbsp;of&nbsp;results&nbsp;discovered&nbsp;from&nbsp;the&nbsp;site&nbsp;being&nbsp;investigated.<br>
 None&nbsp;--&nbsp;if&nbsp;_results&nbsp;is&nbsp;empty&nbsp;or&nbsp;None.<br>
@@ -657,9 +626,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>Target</strong></dt>
 <dd><tt>Returns&nbsp;string&nbsp;representing&nbsp;the&nbsp;target&nbsp;being&nbsp;investigated.<br>
 The&nbsp;string&nbsp;may&nbsp;be&nbsp;an&nbsp;IP&nbsp;Address,&nbsp;MD5&nbsp;hash,&nbsp;or&nbsp;hostname.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;Target&nbsp;from&nbsp;the&nbsp;_target<br>
@@ -672,9 +638,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dd><tt>Returns&nbsp;the&nbsp;target&nbsp;type&nbsp;information&nbsp;whether&nbsp;that&nbsp;be&nbsp;ip,<br>
 md5,&nbsp;or&nbsp;hostname.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;defined&nbsp;as&nbsp;ip,&nbsp;md5,&nbsp;or&nbsp;hostname.<br>
 &nbsp;<br>
@@ -684,9 +647,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>URL</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Domain&nbsp;URL&nbsp;which&nbsp;is<br>
 required&nbsp;to&nbsp;retrieve&nbsp;the&nbsp;information&nbsp;being&nbsp;investigated.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;URL&nbsp;of&nbsp;the&nbsp;site.<br>
@@ -701,9 +661,6 @@ a&nbsp;web&nbsp;site.&nbsp;This&nbsp;is&nbsp;a&nbsp;user-provided&nbsp;string&nb
 on&nbsp;the&nbsp;command&nbsp;line&nbsp;at&nbsp;execution&nbsp;or&nbsp;provided&nbsp;by&nbsp;default<br>
 if&nbsp;not&nbsp;added&nbsp;during&nbsp;execution.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;UserAgent&nbsp;from&nbsp;the&nbsp;_userAgent<br>
 instance&nbsp;variable.<br>
@@ -716,9 +673,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 domain&nbsp;URL&nbsp;plus&nbsp;querystrings&nbsp;and&nbsp;other&nbsp;information&nbsp;required<br>
 to&nbsp;retrieve&nbsp;the&nbsp;information&nbsp;being&nbsp;investigated.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;full&nbsp;URL&nbsp;of&nbsp;the&nbsp;site&nbsp;including<br>
 querystring&nbsp;information&nbsp;and&nbsp;any&nbsp;other&nbsp;info&nbsp;required.<br>
@@ -729,10 +683,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>WebRetrieveDelay</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;number&nbsp;of<br>
 seconds&nbsp;that&nbsp;will&nbsp;be&nbsp;delayed&nbsp;between&nbsp;site&nbsp;retrievals.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;an&nbsp;integer&nbsp;that&nbsp;is&nbsp;the&nbsp;delay&nbsp;in<br>
 seconds&nbsp;that&nbsp;will&nbsp;be&nbsp;used&nbsp;between&nbsp;each&nbsp;web&nbsp;site&nbsp;retrieval.<br>
@@ -789,9 +739,6 @@ arg:<br>
 results&nbsp;--&nbsp;list&nbsp;of&nbsp;results&nbsp;retrieved&nbsp;from&nbsp;the&nbsp;site.<br>
 index&nbsp;--&nbsp;integer&nbsp;value&nbsp;representing&nbsp;the&nbsp;index&nbsp;of&nbsp;the&nbsp;result&nbsp;found.<br>
 &nbsp;<br>
-Return&nbsp;val:<br>
-Nothing&nbsp;is&nbsp;returned&nbsp;from&nbsp;this&nbsp;Method.<br>
-&nbsp;<br>
 Restriction(s):<br>
 The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
 
@@ -807,9 +754,7 @@ index&nbsp;--&nbsp;the&nbsp;integer&nbsp;representing&nbsp;the&nbsp;index&nbsp;o
 &nbsp;<br>
 Return&nbsp;val:<br>
 list&nbsp;--&nbsp;information&nbsp;found&nbsp;from&nbsp;a&nbsp;web&nbsp;site&nbsp;being&nbsp;used&nbsp;as&nbsp;a&nbsp;resource.<br>
-&nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+&nbsp;<br></tt></dd></dl>
 
 <dl><dt><a name="PostTransactionAPIKeySite-submitPost"><strong>submitPost</strong></a>(self, raw_params, headers)</dt><dd><tt>Submits&nbsp;information&nbsp;to&nbsp;a&nbsp;web&nbsp;site&nbsp;being&nbsp;used&nbsp;as&nbsp;a&nbsp;resource&nbsp;that<br>
 requires&nbsp;a&nbsp;post&nbsp;of&nbsp;information.&nbsp;Submits&nbsp;via&nbsp;proxy&nbsp;if&nbsp;--proxy<br>
@@ -827,8 +772,7 @@ Return&nbsp;val:<br>
 string&nbsp;--&nbsp;contains&nbsp;entire&nbsp;web&nbsp;site&nbsp;being&nbsp;used&nbsp;as&nbsp;a<br>
 resource&nbsp;including&nbsp;HTML&nbsp;markup&nbsp;information.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <hr>
 Methods inherited from <a href="siteinfo.html#Site">Site</a>:<br>
@@ -838,23 +782,15 @@ _results&nbsp;instance&nbsp;variable&nbsp;if&nbsp;the&nbsp;argument&nbsp;is&nbsp
 &nbsp;<br>
 arg:<br>
 results&nbsp;--&nbsp;list&nbsp;of&nbsp;results&nbsp;retrieved&nbsp;from&nbsp;the&nbsp;site.<br>
-&nbsp;<br>
-Return&nbsp;val:<br>
-Nothing&nbsp;is&nbsp;returned&nbsp;from&nbsp;this&nbsp;Method.<br>
-&nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="PostTransactionAPIKeySite-getFullURL"><strong>getFullURL</strong></a>(self)</dt><dd><tt>Returns&nbsp;the&nbsp;FullURL&nbsp;property&nbsp;information.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
 string.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="PostTransactionAPIKeySite-getImportantProperty"><strong>getImportantProperty</strong></a>(self, index)</dt><dd><tt>Gets&nbsp;the&nbsp;property&nbsp;information&nbsp;from&nbsp;the&nbsp;property&nbsp;value&nbsp;listed&nbsp;in&nbsp;the<br>
 sites.xml&nbsp;file&nbsp;for&nbsp;that&nbsp;specific&nbsp;site&nbsp;in&nbsp;the&nbsp;importantproperty&nbsp;xml&nbsp;tag.<br>
@@ -870,30 +806,22 @@ Return&nbsp;val:<br>
 Multiple&nbsp;options&nbsp;--&nbsp;returns&nbsp;the&nbsp;return&nbsp;value&nbsp;of&nbsp;the&nbsp;property&nbsp;listed&nbsp;in<br>
 the&nbsp;config&nbsp;file.&nbsp;Most&nbsp;likely&nbsp;a&nbsp;string&nbsp;or&nbsp;a&nbsp;list.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="PostTransactionAPIKeySite-getResults"><strong>getResults</strong></a>(self)</dt><dd><tt>Returns&nbsp;the&nbsp;Results&nbsp;property&nbsp;information.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
 string.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="PostTransactionAPIKeySite-getTarget"><strong>getTarget</strong></a>(self)</dt><dd><tt>Returns&nbsp;the&nbsp;Target&nbsp;property&nbsp;information.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="PostTransactionAPIKeySite-getWebScrape"><strong>getWebScrape</strong></a>(self)</dt><dd><tt>Attempts&nbsp;to&nbsp;retrieve&nbsp;a&nbsp;string&nbsp;from&nbsp;a&nbsp;web&nbsp;site.&nbsp;String&nbsp;retrieved&nbsp;is<br>
 the&nbsp;entire&nbsp;web&nbsp;site&nbsp;including&nbsp;HTML&nbsp;markup.&nbsp;Requests&nbsp;via&nbsp;proxy&nbsp;if<br>
@@ -901,14 +829,10 @@ the&nbsp;entire&nbsp;web&nbsp;site&nbsp;including&nbsp;HTML&nbsp;markup.&nbsp;Re
 Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;entire&nbsp;web&nbsp;site&nbsp;including&nbsp;the<br>
 HTML&nbsp;markup&nbsp;retrieved&nbsp;from&nbsp;the&nbsp;site.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="PostTransactionAPIKeySite-postMessage"><strong>postMessage</strong></a>(self, message)</dt><dd><tt>Prints&nbsp;multiple&nbsp;messages&nbsp;to&nbsp;inform&nbsp;the&nbsp;user&nbsp;of&nbsp;progress.&nbsp;Assignes<br>
 the&nbsp;_messagetopost&nbsp;instance&nbsp;variable&nbsp;to&nbsp;the&nbsp;message.&nbsp;Uses&nbsp;the<br>
@@ -917,11 +841,8 @@ MessageToPost&nbsp;property.<br>
 arg:<br>
 message&nbsp;--&nbsp;string&nbsp;to&nbsp;be&nbsp;utilized&nbsp;as&nbsp;a&nbsp;message&nbsp;to&nbsp;post.<br>
 &nbsp;<br>
-Return&nbsp;val:<br>
-Nothing&nbsp;is&nbsp;returned&nbsp;from&nbsp;this&nbsp;Method.<br>
-&nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+
+</tt></dd></dl>
 
 <hr>
 Class methods inherited from <a href="siteinfo.html#Site">Site</a>:<br>
@@ -997,9 +918,6 @@ Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;APIKey&nbsp;using&n
 _apikey&nbsp;instance&nbsp;variable&nbsp;or&nbsp;returns&nbsp;None&nbsp;if&nbsp;the&nbsp;instance<br>
 variable&nbsp;is&nbsp;empty&nbsp;or&nbsp;not&nbsp;set.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;APIKey&nbsp;from&nbsp;the&nbsp;_apikey<br>
 instance&nbsp;variable.<br>
@@ -1009,9 +927,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 </dl>
 <dl><dt><strong>ErrorMessage</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Error&nbsp;Message.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;error&nbsp;message&nbsp;to&nbsp;print&nbsp;to<br>
@@ -1023,9 +938,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>FriendlyName</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;a&nbsp;friendly&nbsp;string&nbsp;name.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;friendly&nbsp;name&nbsp;for&nbsp;a&nbsp;tag&nbsp;for&nbsp;reporting.<br>
 &nbsp;<br>
@@ -1036,9 +948,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Full&nbsp;URL&nbsp;which&nbsp;is&nbsp;the<br>
 domain&nbsp;URL&nbsp;plus&nbsp;querystrings&nbsp;and&nbsp;other&nbsp;information&nbsp;required<br>
 to&nbsp;retrieve&nbsp;the&nbsp;information&nbsp;being&nbsp;investigated.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;full&nbsp;URL&nbsp;of&nbsp;the&nbsp;site&nbsp;including<br>
@@ -1053,9 +962,6 @@ Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Headers&nbsp;using&
 _headers&nbsp;instance&nbsp;variable&nbsp;or&nbsp;returns&nbsp;None&nbsp;if&nbsp;the&nbsp;instance<br>
 variable&nbsp;is&nbsp;empty&nbsp;or&nbsp;not&nbsp;set.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;Headers&nbsp;from&nbsp;the&nbsp;_headers<br>
 instance&nbsp;variable.<br>
@@ -1068,9 +974,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 that&nbsp;the&nbsp;user&nbsp;wants&nbsp;the&nbsp;site&nbsp;to&nbsp;report.&nbsp;This&nbsp;is&nbsp;set&nbsp;using<br>
 the&nbsp;sites.xml&nbsp;config&nbsp;file&nbsp;in&nbsp;the&nbsp;importantproperty&nbsp;XML&nbsp;tag.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;important&nbsp;property&nbsp;of&nbsp;the&nbsp;site<br>
 that&nbsp;needs&nbsp;to&nbsp;be&nbsp;reported.<br>
@@ -1080,9 +983,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 </dl>
 <dl><dt><strong>MessageToPost</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;a&nbsp;message&nbsp;to&nbsp;the&nbsp;user.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;a&nbsp;message&nbsp;to&nbsp;print&nbsp;to<br>
@@ -1097,9 +997,6 @@ Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Parameters&nbsp;usi
 _params&nbsp;instance&nbsp;variable&nbsp;or&nbsp;returns&nbsp;None&nbsp;if&nbsp;the&nbsp;instance<br>
 variable&nbsp;is&nbsp;empty&nbsp;or&nbsp;not&nbsp;set.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;Parameters&nbsp;from&nbsp;the&nbsp;_params<br>
 instance&nbsp;variable.<br>
@@ -1110,9 +1007,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>Proxy</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;proxy&nbsp;used.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;proxy&nbsp;used<br>
 &nbsp;<br>
@@ -1122,9 +1016,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>RegEx</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;a&nbsp;regular&nbsp;expression<br>
 required&nbsp;to&nbsp;retrieve&nbsp;the&nbsp;information&nbsp;being&nbsp;investigated.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;a&nbsp;regex&nbsp;used&nbsp;to&nbsp;find&nbsp;info&nbsp;on&nbsp;the&nbsp;site.<br>
@@ -1137,9 +1028,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 precedes&nbsp;reporting&nbsp;information&nbsp;so&nbsp;the&nbsp;user&nbsp;knows&nbsp;what<br>
 specifics&nbsp;are&nbsp;being&nbsp;found.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;a&nbsp;tag&nbsp;for&nbsp;reporting&nbsp;information.<br>
 &nbsp;<br>
@@ -1149,10 +1037,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>Results</strong></dt>
 <dd><tt>Checks&nbsp;the&nbsp;instance&nbsp;variable&nbsp;_results&nbsp;is&nbsp;empty&nbsp;or&nbsp;None.<br>
 Returns&nbsp;_results&nbsp;(the&nbsp;results&nbsp;list)&nbsp;or&nbsp;None&nbsp;if&nbsp;it&nbsp;is&nbsp;empty.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 list&nbsp;--&nbsp;list&nbsp;of&nbsp;results&nbsp;discovered&nbsp;from&nbsp;the&nbsp;site&nbsp;being&nbsp;investigated.<br>
 None&nbsp;--&nbsp;if&nbsp;_results&nbsp;is&nbsp;empty&nbsp;or&nbsp;None.<br>
@@ -1163,9 +1047,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>Target</strong></dt>
 <dd><tt>Returns&nbsp;string&nbsp;representing&nbsp;the&nbsp;target&nbsp;being&nbsp;investigated.<br>
 The&nbsp;string&nbsp;may&nbsp;be&nbsp;an&nbsp;IP&nbsp;Address,&nbsp;MD5&nbsp;hash,&nbsp;or&nbsp;hostname.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;Target&nbsp;from&nbsp;the&nbsp;_target<br>
@@ -1178,9 +1059,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dd><tt>Returns&nbsp;the&nbsp;target&nbsp;type&nbsp;information&nbsp;whether&nbsp;that&nbsp;be&nbsp;ip,<br>
 md5,&nbsp;or&nbsp;hostname.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;defined&nbsp;as&nbsp;ip,&nbsp;md5,&nbsp;or&nbsp;hostname.<br>
 &nbsp;<br>
@@ -1190,9 +1068,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>URL</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Domain&nbsp;URL&nbsp;which&nbsp;is<br>
 required&nbsp;to&nbsp;retrieve&nbsp;the&nbsp;information&nbsp;being&nbsp;investigated.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;URL&nbsp;of&nbsp;the&nbsp;site.<br>
@@ -1207,9 +1082,6 @@ a&nbsp;web&nbsp;site.&nbsp;This&nbsp;is&nbsp;a&nbsp;user-provided&nbsp;string&nb
 on&nbsp;the&nbsp;command&nbsp;line&nbsp;at&nbsp;execution&nbsp;or&nbsp;provided&nbsp;by&nbsp;default<br>
 if&nbsp;not&nbsp;added&nbsp;during&nbsp;execution.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;UserAgent&nbsp;from&nbsp;the&nbsp;_userAgent<br>
 instance&nbsp;variable.<br>
@@ -1221,10 +1093,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Full&nbsp;URL&nbsp;which&nbsp;is&nbsp;the<br>
 domain&nbsp;URL&nbsp;plus&nbsp;querystrings&nbsp;and&nbsp;other&nbsp;information&nbsp;required<br>
 to&nbsp;retrieve&nbsp;the&nbsp;information&nbsp;being&nbsp;investigated.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;full&nbsp;URL&nbsp;of&nbsp;the&nbsp;site&nbsp;including<br>
 querystring&nbsp;information&nbsp;and&nbsp;any&nbsp;other&nbsp;info&nbsp;required.<br>
@@ -1235,9 +1103,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>WebRetrieveDelay</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;number&nbsp;of<br>
 seconds&nbsp;that&nbsp;will&nbsp;be&nbsp;delayed&nbsp;between&nbsp;site&nbsp;retrievals.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;an&nbsp;integer&nbsp;that&nbsp;is&nbsp;the&nbsp;delay&nbsp;in<br>
@@ -1290,8 +1155,7 @@ arg:<br>
 site&nbsp;--&nbsp;the&nbsp;site&nbsp;that&nbsp;we&nbsp;will&nbsp;decorate.<br>
 postbydefault&nbsp;--&nbsp;a&nbsp;Boolean&nbsp;representing&nbsp;whether&nbsp;a&nbsp;post&nbsp;will&nbsp;occur.<br>
 &nbsp;<br>
-Return&nbsp;val:<br>
-Nothing&nbsp;is&nbsp;returned&nbsp;from&nbsp;this&nbsp;Method.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="PostTransactionPositiveCapableSite-addMultiResults"><strong>addMultiResults</strong></a>(self, results, index)</dt><dd><tt>Assigns&nbsp;the&nbsp;argument&nbsp;to&nbsp;the&nbsp;_results&nbsp;instance&nbsp;variable&nbsp;to&nbsp;build<br>
 the&nbsp;list&nbsp;or&nbsp;results&nbsp;retrieved&nbsp;from&nbsp;the&nbsp;site.&nbsp;Assign&nbsp;None&nbsp;to&nbsp;the<br>
@@ -1301,25 +1165,17 @@ arg:<br>
 results&nbsp;--&nbsp;list&nbsp;of&nbsp;results&nbsp;retrieved&nbsp;from&nbsp;the&nbsp;site.<br>
 index&nbsp;--&nbsp;integer&nbsp;value&nbsp;representing&nbsp;the&nbsp;index&nbsp;of&nbsp;the&nbsp;result&nbsp;found.<br>
 &nbsp;<br>
-Return&nbsp;val:<br>
-Nothing&nbsp;is&nbsp;returned&nbsp;from&nbsp;this&nbsp;Method.<br>
-&nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="PostTransactionPositiveCapableSite-getContent"><strong>getContent</strong></a>(self)</dt><dd><tt>Attempts&nbsp;to&nbsp;retrieve&nbsp;a&nbsp;string&nbsp;from&nbsp;a&nbsp;web&nbsp;site.&nbsp;String&nbsp;retrieved&nbsp;is<br>
 the&nbsp;entire&nbsp;web&nbsp;site&nbsp;including&nbsp;HTML&nbsp;markup.<br>
 Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;entire&nbsp;web&nbsp;site&nbsp;including&nbsp;the<br>
 HTML&nbsp;markup&nbsp;retrieved&nbsp;from&nbsp;the&nbsp;site.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="PostTransactionPositiveCapableSite-getContentList"><strong>getContentList</strong></a>(self, content, index<font color="#909090">=-1</font>)</dt><dd><tt>Retrieves&nbsp;a&nbsp;list&nbsp;of&nbsp;information&nbsp;retrieved&nbsp;from&nbsp;the&nbsp;sites&nbsp;defined<br>
 in&nbsp;the&nbsp;sites.xml&nbsp;configuration&nbsp;file.<br>
@@ -1334,8 +1190,7 @@ index&nbsp;--&nbsp;the&nbsp;integer&nbsp;representing&nbsp;the&nbsp;index&nbsp;o
 Return&nbsp;val:<br>
 list&nbsp;--&nbsp;information&nbsp;found&nbsp;from&nbsp;a&nbsp;web&nbsp;site&nbsp;being&nbsp;used&nbsp;as&nbsp;a&nbsp;resource.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="PostTransactionPositiveCapableSite-postIsNecessary"><strong>postIsNecessary</strong></a>(self, regex, content)</dt><dd><tt>Checks&nbsp;to&nbsp;determine&nbsp;if&nbsp;the&nbsp;user&nbsp;wants&nbsp;the&nbsp;Automater&nbsp;to&nbsp;post&nbsp;information<br>
 if&nbsp;the&nbsp;site&nbsp;takes&nbsp;a&nbsp;post.&nbsp;The&nbsp;user&nbsp;does&nbsp;this&nbsp;through&nbsp;the&nbsp;argument<br>
@@ -1353,8 +1208,7 @@ resource&nbsp;including&nbsp;HTML&nbsp;markup&nbsp;information.<br>
 Return&nbsp;val:<br>
 Boolean.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="PostTransactionPositiveCapableSite-submitPost"><strong>submitPost</strong></a>(self, raw_params, headers)</dt><dd><tt>Submits&nbsp;information&nbsp;to&nbsp;a&nbsp;web&nbsp;site&nbsp;being&nbsp;used&nbsp;as&nbsp;a&nbsp;resource&nbsp;that<br>
 requires&nbsp;a&nbsp;post&nbsp;of&nbsp;information.&nbsp;Submits&nbsp;via&nbsp;proxy&nbsp;if&nbsp;--proxy<br>
@@ -1372,8 +1226,7 @@ Return&nbsp;val:<br>
 string&nbsp;--&nbsp;contains&nbsp;entire&nbsp;web&nbsp;site&nbsp;being&nbsp;used&nbsp;as&nbsp;a<br>
 resource&nbsp;including&nbsp;HTML&nbsp;markup&nbsp;information.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <hr>
 Methods inherited from <a href="siteinfo.html#Site">Site</a>:<br>
@@ -1383,23 +1236,15 @@ _results&nbsp;instance&nbsp;variable&nbsp;if&nbsp;the&nbsp;argument&nbsp;is&nbsp
 &nbsp;<br>
 arg:<br>
 results&nbsp;--&nbsp;list&nbsp;of&nbsp;results&nbsp;retrieved&nbsp;from&nbsp;the&nbsp;site.<br>
-&nbsp;<br>
-Return&nbsp;val:<br>
-Nothing&nbsp;is&nbsp;returned&nbsp;from&nbsp;this&nbsp;Method.<br>
-&nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="PostTransactionPositiveCapableSite-getFullURL"><strong>getFullURL</strong></a>(self)</dt><dd><tt>Returns&nbsp;the&nbsp;FullURL&nbsp;property&nbsp;information.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="PostTransactionPositiveCapableSite-getImportantProperty"><strong>getImportantProperty</strong></a>(self, index)</dt><dd><tt>Gets&nbsp;the&nbsp;property&nbsp;information&nbsp;from&nbsp;the&nbsp;property&nbsp;value&nbsp;listed&nbsp;in&nbsp;the<br>
 sites.xml&nbsp;file&nbsp;for&nbsp;that&nbsp;specific&nbsp;site&nbsp;in&nbsp;the&nbsp;importantproperty&nbsp;xml&nbsp;tag.<br>
@@ -1415,30 +1260,21 @@ Return&nbsp;val:<br>
 Multiple&nbsp;options&nbsp;--&nbsp;returns&nbsp;the&nbsp;return&nbsp;value&nbsp;of&nbsp;the&nbsp;property&nbsp;listed&nbsp;in<br>
 the&nbsp;config&nbsp;file.&nbsp;Most&nbsp;likely&nbsp;a&nbsp;string&nbsp;or&nbsp;a&nbsp;list.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="PostTransactionPositiveCapableSite-getResults"><strong>getResults</strong></a>(self)</dt><dd><tt>Returns&nbsp;the&nbsp;Results&nbsp;property&nbsp;information.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="PostTransactionPositiveCapableSite-getTarget"><strong>getTarget</strong></a>(self)</dt><dd><tt>Returns&nbsp;the&nbsp;Target&nbsp;property&nbsp;information.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="PostTransactionPositiveCapableSite-getWebScrape"><strong>getWebScrape</strong></a>(self)</dt><dd><tt>Attempts&nbsp;to&nbsp;retrieve&nbsp;a&nbsp;string&nbsp;from&nbsp;a&nbsp;web&nbsp;site.&nbsp;String&nbsp;retrieved&nbsp;is<br>
 the&nbsp;entire&nbsp;web&nbsp;site&nbsp;including&nbsp;HTML&nbsp;markup.&nbsp;Requests&nbsp;via&nbsp;proxy&nbsp;if<br>
@@ -1446,14 +1282,10 @@ the&nbsp;entire&nbsp;web&nbsp;site&nbsp;including&nbsp;HTML&nbsp;markup.&nbsp;Re
 Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;entire&nbsp;web&nbsp;site&nbsp;including&nbsp;the<br>
 HTML&nbsp;markup&nbsp;retrieved&nbsp;from&nbsp;the&nbsp;site.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="PostTransactionPositiveCapableSite-postMessage"><strong>postMessage</strong></a>(self, message)</dt><dd><tt>Prints&nbsp;multiple&nbsp;messages&nbsp;to&nbsp;inform&nbsp;the&nbsp;user&nbsp;of&nbsp;progress.&nbsp;Assignes<br>
 the&nbsp;_messagetopost&nbsp;instance&nbsp;variable&nbsp;to&nbsp;the&nbsp;message.&nbsp;Uses&nbsp;the<br>
@@ -1462,11 +1294,8 @@ MessageToPost&nbsp;property.<br>
 arg:<br>
 message&nbsp;--&nbsp;string&nbsp;to&nbsp;be&nbsp;utilized&nbsp;as&nbsp;a&nbsp;message&nbsp;to&nbsp;post.<br>
 &nbsp;<br>
-Return&nbsp;val:<br>
-Nothing&nbsp;is&nbsp;returned&nbsp;from&nbsp;this&nbsp;Method.<br>
-&nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+
+</tt></dd></dl>
 
 <hr>
 Class methods inherited from <a href="siteinfo.html#Site">Site</a>:<br>
@@ -1542,9 +1371,6 @@ Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;APIKey&nbsp;using&n
 _apikey&nbsp;instance&nbsp;variable&nbsp;or&nbsp;returns&nbsp;None&nbsp;if&nbsp;the&nbsp;instance<br>
 variable&nbsp;is&nbsp;empty&nbsp;or&nbsp;not&nbsp;set.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;APIKey&nbsp;from&nbsp;the&nbsp;_apikey<br>
 instance&nbsp;variable.<br>
@@ -1555,9 +1381,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>ErrorMessage</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Error&nbsp;Message.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;error&nbsp;message&nbsp;to&nbsp;print&nbsp;to<br>
 the&nbsp;standard&nbsp;output.<br>
@@ -1567,9 +1391,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 </dl>
 <dl><dt><strong>FriendlyName</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;a&nbsp;friendly&nbsp;string&nbsp;name.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;friendly&nbsp;name&nbsp;for&nbsp;a&nbsp;tag&nbsp;for&nbsp;reporting.<br>
@@ -1581,9 +1402,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Full&nbsp;URL&nbsp;which&nbsp;is&nbsp;the<br>
 domain&nbsp;URL&nbsp;plus&nbsp;querystrings&nbsp;and&nbsp;other&nbsp;information&nbsp;required<br>
 to&nbsp;retrieve&nbsp;the&nbsp;information&nbsp;being&nbsp;investigated.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;full&nbsp;URL&nbsp;of&nbsp;the&nbsp;site&nbsp;including<br>
@@ -1597,10 +1415,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Headers&nbsp;using&nbsp;the<br>
 _headers&nbsp;instance&nbsp;variable&nbsp;or&nbsp;returns&nbsp;None&nbsp;if&nbsp;the&nbsp;instance<br>
 variable&nbsp;is&nbsp;empty&nbsp;or&nbsp;not&nbsp;set.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;Headers&nbsp;from&nbsp;the&nbsp;_headers<br>
 instance&nbsp;variable.<br>
@@ -1613,9 +1427,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 that&nbsp;the&nbsp;user&nbsp;wants&nbsp;the&nbsp;site&nbsp;to&nbsp;report.&nbsp;This&nbsp;is&nbsp;set&nbsp;using<br>
 the&nbsp;sites.xml&nbsp;config&nbsp;file&nbsp;in&nbsp;the&nbsp;importantproperty&nbsp;XML&nbsp;tag.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;important&nbsp;property&nbsp;of&nbsp;the&nbsp;site<br>
 that&nbsp;needs&nbsp;to&nbsp;be&nbsp;reported.<br>
@@ -1625,9 +1436,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 </dl>
 <dl><dt><strong>MessageToPost</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;a&nbsp;message&nbsp;to&nbsp;the&nbsp;user.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;a&nbsp;message&nbsp;to&nbsp;print&nbsp;to<br>
@@ -1642,9 +1450,6 @@ Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Parameters&nbsp;usi
 _params&nbsp;instance&nbsp;variable&nbsp;or&nbsp;returns&nbsp;None&nbsp;if&nbsp;the&nbsp;instance<br>
 variable&nbsp;is&nbsp;empty&nbsp;or&nbsp;not&nbsp;set.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;Parameters&nbsp;from&nbsp;the&nbsp;_params<br>
 instance&nbsp;variable.<br>
@@ -1655,9 +1460,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>Proxy</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;proxy&nbsp;used.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;proxy&nbsp;used<br>
 &nbsp;<br>
@@ -1667,9 +1469,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>RegEx</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;a&nbsp;regular&nbsp;expression<br>
 required&nbsp;to&nbsp;retrieve&nbsp;the&nbsp;information&nbsp;being&nbsp;investigated.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;a&nbsp;regex&nbsp;used&nbsp;to&nbsp;find&nbsp;info&nbsp;on&nbsp;the&nbsp;site.<br>
@@ -1682,9 +1481,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 precedes&nbsp;reporting&nbsp;information&nbsp;so&nbsp;the&nbsp;user&nbsp;knows&nbsp;what<br>
 specifics&nbsp;are&nbsp;being&nbsp;found.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;a&nbsp;tag&nbsp;for&nbsp;reporting&nbsp;information.<br>
 &nbsp;<br>
@@ -1694,10 +1490,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>Results</strong></dt>
 <dd><tt>Checks&nbsp;the&nbsp;instance&nbsp;variable&nbsp;_results&nbsp;is&nbsp;empty&nbsp;or&nbsp;None.<br>
 Returns&nbsp;_results&nbsp;(the&nbsp;results&nbsp;list)&nbsp;or&nbsp;None&nbsp;if&nbsp;it&nbsp;is&nbsp;empty.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 list&nbsp;--&nbsp;list&nbsp;of&nbsp;results&nbsp;discovered&nbsp;from&nbsp;the&nbsp;site&nbsp;being&nbsp;investigated.<br>
 None&nbsp;--&nbsp;if&nbsp;_results&nbsp;is&nbsp;empty&nbsp;or&nbsp;None.<br>
@@ -1708,10 +1500,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>Target</strong></dt>
 <dd><tt>Returns&nbsp;string&nbsp;representing&nbsp;the&nbsp;target&nbsp;being&nbsp;investigated.<br>
 The&nbsp;string&nbsp;may&nbsp;be&nbsp;an&nbsp;IP&nbsp;Address,&nbsp;MD5&nbsp;hash,&nbsp;or&nbsp;hostname.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;Target&nbsp;from&nbsp;the&nbsp;_target<br>
 instance&nbsp;variable.<br>
@@ -1723,9 +1511,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dd><tt>Returns&nbsp;the&nbsp;target&nbsp;type&nbsp;information&nbsp;whether&nbsp;that&nbsp;be&nbsp;ip,<br>
 md5,&nbsp;or&nbsp;hostname.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;defined&nbsp;as&nbsp;ip,&nbsp;md5,&nbsp;or&nbsp;hostname.<br>
 &nbsp;<br>
@@ -1735,9 +1520,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>URL</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Domain&nbsp;URL&nbsp;which&nbsp;is<br>
 required&nbsp;to&nbsp;retrieve&nbsp;the&nbsp;information&nbsp;being&nbsp;investigated.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;URL&nbsp;of&nbsp;the&nbsp;site.<br>
@@ -1752,9 +1534,6 @@ a&nbsp;web&nbsp;site.&nbsp;This&nbsp;is&nbsp;a&nbsp;user-provided&nbsp;string&nb
 on&nbsp;the&nbsp;command&nbsp;line&nbsp;at&nbsp;execution&nbsp;or&nbsp;provided&nbsp;by&nbsp;default<br>
 if&nbsp;not&nbsp;added&nbsp;during&nbsp;execution.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;UserAgent&nbsp;from&nbsp;the&nbsp;_userAgent<br>
 instance&nbsp;variable.<br>
@@ -1767,9 +1546,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 domain&nbsp;URL&nbsp;plus&nbsp;querystrings&nbsp;and&nbsp;other&nbsp;information&nbsp;required<br>
 to&nbsp;retrieve&nbsp;the&nbsp;information&nbsp;being&nbsp;investigated.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;full&nbsp;URL&nbsp;of&nbsp;the&nbsp;site&nbsp;including<br>
 querystring&nbsp;information&nbsp;and&nbsp;any&nbsp;other&nbsp;info&nbsp;required.<br>
@@ -1780,9 +1556,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>WebRetrieveDelay</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;number&nbsp;of<br>
 seconds&nbsp;that&nbsp;will&nbsp;be&nbsp;delayed&nbsp;between&nbsp;site&nbsp;retrievals.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;an&nbsp;integer&nbsp;that&nbsp;is&nbsp;the&nbsp;delay&nbsp;in<br>
@@ -1825,9 +1598,7 @@ instance&nbsp;variable.&nbsp;This&nbsp;is&nbsp;a&nbsp;play&nbsp;on&nbsp;the&nbsp
 &nbsp;<br>
 arg:<br>
 site&nbsp;--&nbsp;the&nbsp;site&nbsp;that&nbsp;we&nbsp;will&nbsp;decorate.<br>
-&nbsp;<br>
-Return&nbsp;val:<br>
-Nothing&nbsp;is&nbsp;returned&nbsp;from&nbsp;this&nbsp;Method.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="SingleResultsSite-getContentList"><strong>getContentList</strong></a>(self, webcontent)</dt><dd><tt>Retrieves&nbsp;a&nbsp;list&nbsp;of&nbsp;information&nbsp;retrieved&nbsp;from&nbsp;the&nbsp;sites&nbsp;defined<br>
 in&nbsp;the&nbsp;sites.xml&nbsp;configuration&nbsp;file.<br>
@@ -1841,8 +1612,7 @@ from&nbsp;a&nbsp;request.<br>
 Return&nbsp;val:<br>
 list&nbsp;--&nbsp;information&nbsp;found&nbsp;from&nbsp;a&nbsp;web&nbsp;site&nbsp;being&nbsp;used&nbsp;as&nbsp;a&nbsp;resource.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <hr>
 Methods inherited from <a href="siteinfo.html#Site">Site</a>:<br>
@@ -1853,22 +1623,15 @@ _results&nbsp;instance&nbsp;variable&nbsp;if&nbsp;the&nbsp;argument&nbsp;is&nbsp
 arg:<br>
 results&nbsp;--&nbsp;list&nbsp;of&nbsp;results&nbsp;retrieved&nbsp;from&nbsp;the&nbsp;site.<br>
 &nbsp;<br>
-Return&nbsp;val:<br>
-Nothing&nbsp;is&nbsp;returned&nbsp;from&nbsp;this&nbsp;Method.<br>
-&nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="SingleResultsSite-getFullURL"><strong>getFullURL</strong></a>(self)</dt><dd><tt>Returns&nbsp;the&nbsp;FullURL&nbsp;property&nbsp;information.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="SingleResultsSite-getImportantProperty"><strong>getImportantProperty</strong></a>(self, index)</dt><dd><tt>Gets&nbsp;the&nbsp;property&nbsp;information&nbsp;from&nbsp;the&nbsp;property&nbsp;value&nbsp;listed&nbsp;in&nbsp;the<br>
 sites.xml&nbsp;file&nbsp;for&nbsp;that&nbsp;specific&nbsp;site&nbsp;in&nbsp;the&nbsp;importantproperty&nbsp;xml&nbsp;tag.<br>
@@ -1884,30 +1647,22 @@ Return&nbsp;val:<br>
 Multiple&nbsp;options&nbsp;--&nbsp;returns&nbsp;the&nbsp;return&nbsp;value&nbsp;of&nbsp;the&nbsp;property&nbsp;listed&nbsp;in<br>
 the&nbsp;config&nbsp;file.&nbsp;Most&nbsp;likely&nbsp;a&nbsp;string&nbsp;or&nbsp;a&nbsp;list.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="SingleResultsSite-getResults"><strong>getResults</strong></a>(self)</dt><dd><tt>Returns&nbsp;the&nbsp;Results&nbsp;property&nbsp;information.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="SingleResultsSite-getTarget"><strong>getTarget</strong></a>(self)</dt><dd><tt>Returns&nbsp;the&nbsp;Target&nbsp;property&nbsp;information.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
+
 &nbsp;<br>
 Return&nbsp;val:<br>
 string.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="SingleResultsSite-getWebScrape"><strong>getWebScrape</strong></a>(self)</dt><dd><tt>Attempts&nbsp;to&nbsp;retrieve&nbsp;a&nbsp;string&nbsp;from&nbsp;a&nbsp;web&nbsp;site.&nbsp;String&nbsp;retrieved&nbsp;is<br>
 the&nbsp;entire&nbsp;web&nbsp;site&nbsp;including&nbsp;HTML&nbsp;markup.&nbsp;Requests&nbsp;via&nbsp;proxy&nbsp;if<br>
@@ -1915,14 +1670,11 @@ the&nbsp;entire&nbsp;web&nbsp;site&nbsp;including&nbsp;HTML&nbsp;markup.&nbsp;Re
 Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;entire&nbsp;web&nbsp;site&nbsp;including&nbsp;the<br>
 HTML&nbsp;markup&nbsp;retrieved&nbsp;from&nbsp;the&nbsp;site.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="SingleResultsSite-postMessage"><strong>postMessage</strong></a>(self, message)</dt><dd><tt>Prints&nbsp;multiple&nbsp;messages&nbsp;to&nbsp;inform&nbsp;the&nbsp;user&nbsp;of&nbsp;progress.&nbsp;Assignes<br>
 the&nbsp;_messagetopost&nbsp;instance&nbsp;variable&nbsp;to&nbsp;the&nbsp;message.&nbsp;Uses&nbsp;the<br>
@@ -1931,11 +1683,7 @@ MessageToPost&nbsp;property.<br>
 arg:<br>
 message&nbsp;--&nbsp;string&nbsp;to&nbsp;be&nbsp;utilized&nbsp;as&nbsp;a&nbsp;message&nbsp;to&nbsp;post.<br>
 &nbsp;<br>
-Return&nbsp;val:<br>
-Nothing&nbsp;is&nbsp;returned&nbsp;from&nbsp;this&nbsp;Method.<br>
-&nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <hr>
 Class methods inherited from <a href="siteinfo.html#Site">Site</a>:<br>
@@ -2010,10 +1758,7 @@ Data descriptors inherited from <a href="siteinfo.html#Site">Site</a>:<br>
 Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;APIKey&nbsp;using&nbsp;the<br>
 _apikey&nbsp;instance&nbsp;variable&nbsp;or&nbsp;returns&nbsp;None&nbsp;if&nbsp;the&nbsp;instance<br>
 variable&nbsp;is&nbsp;empty&nbsp;or&nbsp;not&nbsp;set.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;APIKey&nbsp;from&nbsp;the&nbsp;_apikey<br>
 instance&nbsp;variable.<br>
@@ -2023,9 +1768,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 </dl>
 <dl><dt><strong>ErrorMessage</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Error&nbsp;Message.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;error&nbsp;message&nbsp;to&nbsp;print&nbsp;to<br>
@@ -2037,9 +1779,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>FriendlyName</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;a&nbsp;friendly&nbsp;string&nbsp;name.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;friendly&nbsp;name&nbsp;for&nbsp;a&nbsp;tag&nbsp;for&nbsp;reporting.<br>
 &nbsp;<br>
@@ -2051,9 +1791,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 domain&nbsp;URL&nbsp;plus&nbsp;querystrings&nbsp;and&nbsp;other&nbsp;information&nbsp;required<br>
 to&nbsp;retrieve&nbsp;the&nbsp;information&nbsp;being&nbsp;investigated.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;full&nbsp;URL&nbsp;of&nbsp;the&nbsp;site&nbsp;including<br>
 querystring&nbsp;information&nbsp;and&nbsp;any&nbsp;other&nbsp;info&nbsp;required.<br>
@@ -2067,9 +1805,7 @@ Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Headers&nbsp;using&
 _headers&nbsp;instance&nbsp;variable&nbsp;or&nbsp;returns&nbsp;None&nbsp;if&nbsp;the&nbsp;instance<br>
 variable&nbsp;is&nbsp;empty&nbsp;or&nbsp;not&nbsp;set.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;Headers&nbsp;from&nbsp;the&nbsp;_headers<br>
 instance&nbsp;variable.<br>
@@ -2081,10 +1817,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Important&nbsp;Property<br>
 that&nbsp;the&nbsp;user&nbsp;wants&nbsp;the&nbsp;site&nbsp;to&nbsp;report.&nbsp;This&nbsp;is&nbsp;set&nbsp;using<br>
 the&nbsp;sites.xml&nbsp;config&nbsp;file&nbsp;in&nbsp;the&nbsp;importantproperty&nbsp;XML&nbsp;tag.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;important&nbsp;property&nbsp;of&nbsp;the&nbsp;site<br>
 that&nbsp;needs&nbsp;to&nbsp;be&nbsp;reported.<br>
@@ -2095,9 +1827,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>MessageToPost</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;a&nbsp;message&nbsp;to&nbsp;the&nbsp;user.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;a&nbsp;message&nbsp;to&nbsp;print&nbsp;to<br>
 the&nbsp;standard&nbsp;output.<br>
@@ -2111,9 +1841,6 @@ Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Parameters&nbsp;usi
 _params&nbsp;instance&nbsp;variable&nbsp;or&nbsp;returns&nbsp;None&nbsp;if&nbsp;the&nbsp;instance<br>
 variable&nbsp;is&nbsp;empty&nbsp;or&nbsp;not&nbsp;set.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;Parameters&nbsp;from&nbsp;the&nbsp;_params<br>
 instance&nbsp;variable.<br>
@@ -2124,9 +1851,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>Proxy</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;proxy&nbsp;used.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;proxy&nbsp;used<br>
 &nbsp;<br>
@@ -2136,10 +1860,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>RegEx</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;a&nbsp;regular&nbsp;expression<br>
 required&nbsp;to&nbsp;retrieve&nbsp;the&nbsp;information&nbsp;being&nbsp;investigated.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;a&nbsp;regex&nbsp;used&nbsp;to&nbsp;find&nbsp;info&nbsp;on&nbsp;the&nbsp;site.<br>
 &nbsp;<br>
@@ -2150,10 +1871,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;a&nbsp;report&nbsp;string&nbsp;tag&nbsp;that<br>
 precedes&nbsp;reporting&nbsp;information&nbsp;so&nbsp;the&nbsp;user&nbsp;knows&nbsp;what<br>
 specifics&nbsp;are&nbsp;being&nbsp;found.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;a&nbsp;tag&nbsp;for&nbsp;reporting&nbsp;information.<br>
 &nbsp;<br>
@@ -2163,9 +1881,6 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>Results</strong></dt>
 <dd><tt>Checks&nbsp;the&nbsp;instance&nbsp;variable&nbsp;_results&nbsp;is&nbsp;empty&nbsp;or&nbsp;None.<br>
 Returns&nbsp;_results&nbsp;(the&nbsp;results&nbsp;list)&nbsp;or&nbsp;None&nbsp;if&nbsp;it&nbsp;is&nbsp;empty.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
 &nbsp;<br>
 Return&nbsp;val:<br>
 list&nbsp;--&nbsp;list&nbsp;of&nbsp;results&nbsp;discovered&nbsp;from&nbsp;the&nbsp;site&nbsp;being&nbsp;investigated.<br>
@@ -2177,10 +1892,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>Target</strong></dt>
 <dd><tt>Returns&nbsp;string&nbsp;representing&nbsp;the&nbsp;target&nbsp;being&nbsp;investigated.<br>
 The&nbsp;string&nbsp;may&nbsp;be&nbsp;an&nbsp;IP&nbsp;Address,&nbsp;MD5&nbsp;hash,&nbsp;or&nbsp;hostname.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;Target&nbsp;from&nbsp;the&nbsp;_target<br>
 instance&nbsp;variable.<br>
@@ -2192,9 +1904,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dd><tt>Returns&nbsp;the&nbsp;target&nbsp;type&nbsp;information&nbsp;whether&nbsp;that&nbsp;be&nbsp;ip,<br>
 md5,&nbsp;or&nbsp;hostname.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;defined&nbsp;as&nbsp;ip,&nbsp;md5,&nbsp;or&nbsp;hostname.<br>
 &nbsp;<br>
@@ -2205,9 +1915,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Domain&nbsp;URL&nbsp;which&nbsp;is<br>
 required&nbsp;to&nbsp;retrieve&nbsp;the&nbsp;information&nbsp;being&nbsp;investigated.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;URL&nbsp;of&nbsp;the&nbsp;site.<br>
 &nbsp;<br>
@@ -2220,10 +1928,7 @@ be&nbsp;used&nbsp;when&nbsp;requesting&nbsp;or&nbsp;submitting&nbsp;information&
 a&nbsp;web&nbsp;site.&nbsp;This&nbsp;is&nbsp;a&nbsp;user-provided&nbsp;string&nbsp;implemented<br>
 on&nbsp;the&nbsp;command&nbsp;line&nbsp;at&nbsp;execution&nbsp;or&nbsp;provided&nbsp;by&nbsp;default<br>
 if&nbsp;not&nbsp;added&nbsp;during&nbsp;execution.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;UserAgent&nbsp;from&nbsp;the&nbsp;_userAgent<br>
 instance&nbsp;variable.<br>
@@ -2235,10 +1940,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Full&nbsp;URL&nbsp;which&nbsp;is&nbsp;the<br>
 domain&nbsp;URL&nbsp;plus&nbsp;querystrings&nbsp;and&nbsp;other&nbsp;information&nbsp;required<br>
 to&nbsp;retrieve&nbsp;the&nbsp;information&nbsp;being&nbsp;investigated.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;full&nbsp;URL&nbsp;of&nbsp;the&nbsp;site&nbsp;including<br>
 querystring&nbsp;information&nbsp;and&nbsp;any&nbsp;other&nbsp;info&nbsp;required.<br>
@@ -2250,9 +1952,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;number&nbsp;of<br>
 seconds&nbsp;that&nbsp;will&nbsp;be&nbsp;delayed&nbsp;between&nbsp;site&nbsp;retrievals.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;an&nbsp;integer&nbsp;that&nbsp;is&nbsp;the&nbsp;delay&nbsp;in<br>
 seconds&nbsp;that&nbsp;will&nbsp;be&nbsp;used&nbsp;between&nbsp;each&nbsp;web&nbsp;site&nbsp;retrieval.<br>
@@ -2363,8 +2063,7 @@ XML&nbsp;tag&nbsp;in&nbsp;the&nbsp;sites.xml&nbsp;configuration&nbsp;file.<br>
 apikey&nbsp;--&nbsp;string&nbsp;or&nbsp;list&nbsp;of&nbsp;strings&nbsp;found&nbsp;in&nbsp;the&nbsp;entry&nbsp;XML&nbsp;tags&nbsp;within<br>
 the&nbsp;apikey&nbsp;XML&nbsp;tag&nbsp;in&nbsp;the&nbsp;sites.xml&nbsp;configuration&nbsp;file.<br>
 &nbsp;<br>
-Return&nbsp;val:<br>
-Nothing&nbsp;is&nbsp;returned&nbsp;from&nbsp;this&nbsp;Method.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="Site-addResults"><strong>addResults</strong></a>(self, results)</dt><dd><tt>Assigns&nbsp;the&nbsp;argument&nbsp;to&nbsp;the&nbsp;_results&nbsp;instance&nbsp;variable&nbsp;to&nbsp;build<br>
 the&nbsp;list&nbsp;or&nbsp;results&nbsp;retrieved&nbsp;from&nbsp;the&nbsp;site.&nbsp;Assign&nbsp;None&nbsp;to&nbsp;the<br>
@@ -2373,22 +2072,15 @@ _results&nbsp;instance&nbsp;variable&nbsp;if&nbsp;the&nbsp;argument&nbsp;is&nbsp
 arg:<br>
 results&nbsp;--&nbsp;list&nbsp;of&nbsp;results&nbsp;retrieved&nbsp;from&nbsp;the&nbsp;site.<br>
 &nbsp;<br>
-Return&nbsp;val:<br>
-Nothing&nbsp;is&nbsp;returned&nbsp;from&nbsp;this&nbsp;Method.<br>
-&nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="Site-getFullURL"><strong>getFullURL</strong></a>(self)</dt><dd><tt>Returns&nbsp;the&nbsp;FullURL&nbsp;property&nbsp;information.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="Site-getImportantProperty"><strong>getImportantProperty</strong></a>(self, index)</dt><dd><tt>Gets&nbsp;the&nbsp;property&nbsp;information&nbsp;from&nbsp;the&nbsp;property&nbsp;value&nbsp;listed&nbsp;in&nbsp;the<br>
 sites.xml&nbsp;file&nbsp;for&nbsp;that&nbsp;specific&nbsp;site&nbsp;in&nbsp;the&nbsp;importantproperty&nbsp;xml&nbsp;tag.<br>
@@ -2404,30 +2096,22 @@ Return&nbsp;val:<br>
 Multiple&nbsp;options&nbsp;--&nbsp;returns&nbsp;the&nbsp;return&nbsp;value&nbsp;of&nbsp;the&nbsp;property&nbsp;listed&nbsp;in<br>
 the&nbsp;config&nbsp;file.&nbsp;Most&nbsp;likely&nbsp;a&nbsp;string&nbsp;or&nbsp;a&nbsp;list.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="Site-getResults"><strong>getResults</strong></a>(self)</dt><dd><tt>Returns&nbsp;the&nbsp;Results&nbsp;property&nbsp;information.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
+
 &nbsp;<br>
 Return&nbsp;val:<br>
 string.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="Site-getTarget"><strong>getTarget</strong></a>(self)</dt><dd><tt>Returns&nbsp;the&nbsp;Target&nbsp;property&nbsp;information.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="Site-getWebScrape"><strong>getWebScrape</strong></a>(self)</dt><dd><tt>Attempts&nbsp;to&nbsp;retrieve&nbsp;a&nbsp;string&nbsp;from&nbsp;a&nbsp;web&nbsp;site.&nbsp;String&nbsp;retrieved&nbsp;is<br>
 the&nbsp;entire&nbsp;web&nbsp;site&nbsp;including&nbsp;HTML&nbsp;markup.&nbsp;Requests&nbsp;via&nbsp;proxy&nbsp;if<br>
@@ -2435,14 +2119,11 @@ the&nbsp;entire&nbsp;web&nbsp;site&nbsp;including&nbsp;HTML&nbsp;markup.&nbsp;Re
 Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;entire&nbsp;web&nbsp;site&nbsp;including&nbsp;the<br>
 HTML&nbsp;markup&nbsp;retrieved&nbsp;from&nbsp;the&nbsp;site.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="Site-postMessage"><strong>postMessage</strong></a>(self, message)</dt><dd><tt>Prints&nbsp;multiple&nbsp;messages&nbsp;to&nbsp;inform&nbsp;the&nbsp;user&nbsp;of&nbsp;progress.&nbsp;Assignes<br>
 the&nbsp;_messagetopost&nbsp;instance&nbsp;variable&nbsp;to&nbsp;the&nbsp;message.&nbsp;Uses&nbsp;the<br>
@@ -2451,11 +2132,7 @@ MessageToPost&nbsp;property.<br>
 arg:<br>
 message&nbsp;--&nbsp;string&nbsp;to&nbsp;be&nbsp;utilized&nbsp;as&nbsp;a&nbsp;message&nbsp;to&nbsp;post.<br>
 &nbsp;<br>
-Return&nbsp;val:<br>
-Nothing&nbsp;is&nbsp;returned&nbsp;from&nbsp;this&nbsp;Method.<br>
-&nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <hr>
 Class methods defined here:<br>
@@ -2531,9 +2208,7 @@ Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;APIKey&nbsp;using&n
 _apikey&nbsp;instance&nbsp;variable&nbsp;or&nbsp;returns&nbsp;None&nbsp;if&nbsp;the&nbsp;instance<br>
 variable&nbsp;is&nbsp;empty&nbsp;or&nbsp;not&nbsp;set.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;APIKey&nbsp;from&nbsp;the&nbsp;_apikey<br>
 instance&nbsp;variable.<br>
@@ -2544,9 +2219,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>ErrorMessage</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Error&nbsp;Message.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;error&nbsp;message&nbsp;to&nbsp;print&nbsp;to<br>
 the&nbsp;standard&nbsp;output.<br>
@@ -2556,10 +2229,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 </dl>
 <dl><dt><strong>FriendlyName</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;a&nbsp;friendly&nbsp;string&nbsp;name.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;friendly&nbsp;name&nbsp;for&nbsp;a&nbsp;tag&nbsp;for&nbsp;reporting.<br>
 &nbsp;<br>
@@ -2571,9 +2241,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 domain&nbsp;URL&nbsp;plus&nbsp;querystrings&nbsp;and&nbsp;other&nbsp;information&nbsp;required<br>
 to&nbsp;retrieve&nbsp;the&nbsp;information&nbsp;being&nbsp;investigated.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;full&nbsp;URL&nbsp;of&nbsp;the&nbsp;site&nbsp;including<br>
 querystring&nbsp;information&nbsp;and&nbsp;any&nbsp;other&nbsp;info&nbsp;required.<br>
@@ -2586,9 +2254,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Headers&nbsp;using&nbsp;the<br>
 _headers&nbsp;instance&nbsp;variable&nbsp;or&nbsp;returns&nbsp;None&nbsp;if&nbsp;the&nbsp;instance<br>
 variable&nbsp;is&nbsp;empty&nbsp;or&nbsp;not&nbsp;set.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
+
 &nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;Headers&nbsp;from&nbsp;the&nbsp;_headers<br>
@@ -2602,9 +2268,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 that&nbsp;the&nbsp;user&nbsp;wants&nbsp;the&nbsp;site&nbsp;to&nbsp;report.&nbsp;This&nbsp;is&nbsp;set&nbsp;using<br>
 the&nbsp;sites.xml&nbsp;config&nbsp;file&nbsp;in&nbsp;the&nbsp;importantproperty&nbsp;XML&nbsp;tag.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;important&nbsp;property&nbsp;of&nbsp;the&nbsp;site<br>
 that&nbsp;needs&nbsp;to&nbsp;be&nbsp;reported.<br>
@@ -2615,9 +2279,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>MessageToPost</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;a&nbsp;message&nbsp;to&nbsp;the&nbsp;user.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;a&nbsp;message&nbsp;to&nbsp;print&nbsp;to<br>
 the&nbsp;standard&nbsp;output.<br>
@@ -2630,10 +2292,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Parameters&nbsp;using&nbsp;the<br>
 _params&nbsp;instance&nbsp;variable&nbsp;or&nbsp;returns&nbsp;None&nbsp;if&nbsp;the&nbsp;instance<br>
 variable&nbsp;is&nbsp;empty&nbsp;or&nbsp;not&nbsp;set.<br>
-&nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;Parameters&nbsp;from&nbsp;the&nbsp;_params<br>
 instance&nbsp;variable.<br>
@@ -2644,9 +2303,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dl><dt><strong>Proxy</strong></dt>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;proxy&nbsp;used.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;proxy&nbsp;used<br>
 &nbsp;<br>
@@ -2657,9 +2314,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;a&nbsp;regular&nbsp;expression<br>
 required&nbsp;to&nbsp;retrieve&nbsp;the&nbsp;information&nbsp;being&nbsp;investigated.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;a&nbsp;regex&nbsp;used&nbsp;to&nbsp;find&nbsp;info&nbsp;on&nbsp;the&nbsp;site.<br>
 &nbsp;<br>
@@ -2671,9 +2326,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 precedes&nbsp;reporting&nbsp;information&nbsp;so&nbsp;the&nbsp;user&nbsp;knows&nbsp;what<br>
 specifics&nbsp;are&nbsp;being&nbsp;found.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;a&nbsp;tag&nbsp;for&nbsp;reporting&nbsp;information.<br>
 &nbsp;<br>
@@ -2684,9 +2337,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dd><tt>Checks&nbsp;the&nbsp;instance&nbsp;variable&nbsp;_results&nbsp;is&nbsp;empty&nbsp;or&nbsp;None.<br>
 Returns&nbsp;_results&nbsp;(the&nbsp;results&nbsp;list)&nbsp;or&nbsp;None&nbsp;if&nbsp;it&nbsp;is&nbsp;empty.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 list&nbsp;--&nbsp;list&nbsp;of&nbsp;results&nbsp;discovered&nbsp;from&nbsp;the&nbsp;site&nbsp;being&nbsp;investigated.<br>
 None&nbsp;--&nbsp;if&nbsp;_results&nbsp;is&nbsp;empty&nbsp;or&nbsp;None.<br>
@@ -2698,9 +2349,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dd><tt>Returns&nbsp;string&nbsp;representing&nbsp;the&nbsp;target&nbsp;being&nbsp;investigated.<br>
 The&nbsp;string&nbsp;may&nbsp;be&nbsp;an&nbsp;IP&nbsp;Address,&nbsp;MD5&nbsp;hash,&nbsp;or&nbsp;hostname.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;Target&nbsp;from&nbsp;the&nbsp;_target<br>
 instance&nbsp;variable.<br>
@@ -2712,9 +2361,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dd><tt>Returns&nbsp;the&nbsp;target&nbsp;type&nbsp;information&nbsp;whether&nbsp;that&nbsp;be&nbsp;ip,<br>
 md5,&nbsp;or&nbsp;hostname.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;defined&nbsp;as&nbsp;ip,&nbsp;md5,&nbsp;or&nbsp;hostname.<br>
 &nbsp;<br>
@@ -2725,9 +2372,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representing&nbsp;the&nbsp;Domain&nbsp;URL&nbsp;which&nbsp;is<br>
 required&nbsp;to&nbsp;retrieve&nbsp;the&nbsp;information&nbsp;being&nbsp;investigated.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;URL&nbsp;of&nbsp;the&nbsp;site.<br>
 &nbsp;<br>
@@ -2741,9 +2386,6 @@ a&nbsp;web&nbsp;site.&nbsp;This&nbsp;is&nbsp;a&nbsp;user-provided&nbsp;string&nb
 on&nbsp;the&nbsp;command&nbsp;line&nbsp;at&nbsp;execution&nbsp;or&nbsp;provided&nbsp;by&nbsp;default<br>
 if&nbsp;not&nbsp;added&nbsp;during&nbsp;execution.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;the&nbsp;UserAgent&nbsp;from&nbsp;the&nbsp;_userAgent<br>
 instance&nbsp;variable.<br>
@@ -2756,9 +2398,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 domain&nbsp;URL&nbsp;plus&nbsp;querystrings&nbsp;and&nbsp;other&nbsp;information&nbsp;required<br>
 to&nbsp;retrieve&nbsp;the&nbsp;information&nbsp;being&nbsp;investigated.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representing&nbsp;the&nbsp;full&nbsp;URL&nbsp;of&nbsp;the&nbsp;site&nbsp;including<br>
 querystring&nbsp;information&nbsp;and&nbsp;any&nbsp;other&nbsp;info&nbsp;required.<br>
@@ -2770,9 +2410,7 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 <dd><tt>Returns&nbsp;the&nbsp;string&nbsp;representation&nbsp;of&nbsp;the&nbsp;number&nbsp;of<br>
 seconds&nbsp;that&nbsp;will&nbsp;be&nbsp;delayed&nbsp;between&nbsp;site&nbsp;retrievals.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 string&nbsp;--&nbsp;representation&nbsp;of&nbsp;an&nbsp;integer&nbsp;that&nbsp;is&nbsp;the&nbsp;delay&nbsp;in<br>
 seconds&nbsp;that&nbsp;will&nbsp;be&nbsp;used&nbsp;between&nbsp;each&nbsp;web&nbsp;site&nbsp;retrieval.<br>
@@ -2807,12 +2445,10 @@ _sites<br>&nbsp;</tt></td></tr>
 <dl><dt><a name="SiteFacade-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Class&nbsp;constructor.&nbsp;Simply&nbsp;creates&nbsp;a&nbsp;blank&nbsp;list&nbsp;and&nbsp;assigns&nbsp;it&nbsp;to<br>
 instance&nbsp;variable&nbsp;_sites&nbsp;that&nbsp;will&nbsp;be&nbsp;filled&nbsp;with&nbsp;retrieved&nbsp;info<br>
 from&nbsp;sites&nbsp;defined&nbsp;in&nbsp;the&nbsp;sites.xml&nbsp;configuration&nbsp;file.<br>
+
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
-Return&nbsp;val:<br>
-Nothing&nbsp;is&nbsp;returned&nbsp;from&nbsp;this&nbsp;Method.</tt></dd></dl>
+
+    </tt></dd></dl>
 
 <dl><dt><a name="SiteFacade-identifyTargetType"><strong>identifyTargetType</strong></a>(self, target)</dt><dd><tt>Checks&nbsp;the&nbsp;target&nbsp;information&nbsp;provided&nbsp;to&nbsp;determine&nbsp;if&nbsp;it&nbsp;is&nbsp;a(n)<br>
 IP&nbsp;Address&nbsp;in&nbsp;standard;&nbsp;CIDR&nbsp;or&nbsp;dash&nbsp;notation,&nbsp;or&nbsp;an&nbsp;MD5&nbsp;hash,<br>
@@ -2828,8 +2464,7 @@ argument&nbsp;to&nbsp;the&nbsp;program&nbsp;when&nbsp;Automater&nbsp;is&nbsp;run
 Return&nbsp;val:<br>
 string.<br>
 &nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <dl><dt><a name="SiteFacade-runSiteAutomation"><strong>runSiteAutomation</strong></a>(self, webretrievedelay, proxy, targetlist, source, postbydefault, useragent)</dt><dd><tt>Builds&nbsp;site&nbsp;objects&nbsp;representative&nbsp;of&nbsp;each&nbsp;site&nbsp;listed&nbsp;in&nbsp;the&nbsp;sites.xml<br>
 config&nbsp;file.&nbsp;Appends&nbsp;a&nbsp;<a href="#Site">Site</a>&nbsp;<a href="__builtin__.html#object">object</a>&nbsp;or&nbsp;one&nbsp;of&nbsp;it's&nbsp;subordinate&nbsp;objects<br>
@@ -2850,11 +2485,7 @@ to&nbsp;post&nbsp;data&nbsp;to&nbsp;a&nbsp;site&nbsp;if&nbsp;a&nbsp;post&nbsp;is
 useragent&nbsp;--&nbsp;String&nbsp;representing&nbsp;user-agent&nbsp;that&nbsp;will&nbsp;be&nbsp;utilized&nbsp;when<br>
 requesting&nbsp;or&nbsp;submitting&nbsp;data&nbsp;to&nbsp;or&nbsp;from&nbsp;a&nbsp;web&nbsp;site.<br>
 &nbsp;<br>
-Return&nbsp;val:<br>
-Nothing&nbsp;is&nbsp;returned&nbsp;from&nbsp;this&nbsp;Method.<br>
-&nbsp;<br>
-Restriction(s):<br>
-The&nbsp;Method&nbsp;has&nbsp;no&nbsp;restrictions.</tt></dd></dl>
+</tt></dd></dl>
 
 <hr>
 Data descriptors defined here:<br>
@@ -2862,9 +2493,7 @@ Data descriptors defined here:<br>
 <dd><tt>Checks&nbsp;the&nbsp;instance&nbsp;variable&nbsp;_sites&nbsp;is&nbsp;empty&nbsp;or&nbsp;None.<br>
 Returns&nbsp;_sites&nbsp;(the&nbsp;site&nbsp;list)&nbsp;or&nbsp;None&nbsp;if&nbsp;it&nbsp;is&nbsp;empty.<br>
 &nbsp;<br>
-arg:<br>
-No&nbsp;args&nbsp;are&nbsp;required.<br>
-&nbsp;<br>
+
 Return&nbsp;val:<br>
 list&nbsp;--&nbsp;of&nbsp;Site&nbsp;objects&nbsp;or&nbsp;its&nbsp;subordinates.<br>
 None&nbsp;--&nbsp;if&nbsp;_sites&nbsp;is&nbsp;empty&nbsp;or&nbsp;None.<br>
@@ -2881,4 +2510,5 @@ This&nbsp;Method&nbsp;is&nbsp;tagged&nbsp;as&nbsp;a&nbsp;Property.</tt></dd>
 </td></tr></tbody></table><p></p></td></tr></tbody></table>
 <p></p>
 
-<p></p></body></html>
+<p></p>
+</body></html>
