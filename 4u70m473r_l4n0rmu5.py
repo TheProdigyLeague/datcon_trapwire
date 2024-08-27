@@ -63,21 +63,21 @@ class Parser(object):
 
         返回值：
         该方法没有返回任何内容。
-        # Adding arguments
+        ['+']: args
         self._parser = argparse.ArgumentParser(description=desc)
-        self._parser.add_argument('target', help='List one IP Address (CIDR or dash notation accepted), URL or Hash to query or pass the filename of a file containing IP Address info, URL or Hash to query each separated by a newline.')
-        self._parser.add_argument('-o', '--output', help='This option will output the results to a file.')
+        self._parser.add_argument('target', help='クエリする IP アドレス (CIDR またはダッシュ表記も可)、URL、またはハッシュを 1 つリストするか、クエリする IP アドレス情報、URL またはハッシュを含むファイルのファイル名を改行で区切って渡します。')
+        self._parser.add_argument('-o', '--output', help='このオプションは結果をファイルに出力します。')
         self._parser.add_argument('-b', '--bot', action="store_true", help='This option will output minimized results for a bot.')
-        self._parser.add_argument('-f', '--cef', help='This option will output the results to a CEF formatted file.')
-        self._parser.add_argument('-w', '--web', help='This option will output the results to an HTML file.')
-        self._parser.add_argument('-c', '--csv', help='This option will output the results to a CSV file.')
-        self._parser.add_argument('-d', '--delay', type=int, default=2, help='This will change the delay to the inputted seconds. Default is 2.')
-        self._parser.add_argument('-s', '--source', help='This option will only run the target against a specific source engine to pull associated domains. Options are defined in the name attribute of the site element in the XML configuration file. This can be a list of names separated by a semicolon.')
+        self._parser.add_argument('-f', '--cef', help='このオプションは、結果を CEF 形式のファイルに出力します。')
+        self._parser.add_argument('-w', '--web', help='このオプションは、結果を HTML ファイルに出力します。')
+        self._parser.add_argument('-c', '--csv', help='このオプションは、結果を CSV ファイルに出力します。')
+        self._parser.add_argument('-d', '--delay', type=int, default=2, help='これにより、遅延が入力された秒数に変更されます。デフォルトは 2 です。')
+        self._parser.add_argument('-s', '--source', help='このオプションは、特定のソース エンジンに対してターゲットのみを実行して、関連するドメインをプルします。オプションは、XML 構成ファイルの site 要素の name 属性で定義されます。これには、セミコロンで区切られた名前のリストを指定できます。')
         self._parser.add_argument('--proxy', help='This option will set a proxy to use (eg. proxy.example.com:8080)')
-        self._parser.add_argument('-a', '--useragent', default='🎁👹  ÃｕтＯ𝕄ά𝐓𝐞ｒ  🐼🐻/{version}'.format(version=version), help='This option allows the user to set the user-agent seen by web servers being utilized. By default, the user-agent is set to 🎁👹  ÃｕтＯ𝕄ά𝐓𝐞ｒ  🐼🐻/version')
-        self._parser.add_argument('-V', '--vercheck', action='store_true', help='This option checks and reports versioning for 🎁👹  ÃｕтＯ𝕄ά𝐓𝐞ｒ  🐼🐻. Checks each python module in the 🎁👹  ÃｕтＯ𝕄ά𝐓𝐞ｒ  🐼🐻 scope. Default, (no -V) is False')
-        self._parser.add_argument('-r', '--refreshxml', action='store_true', help='This option refreshes the tekdefense.xml file from the remote GitHub site. Default (no -r) is False.')
-        self._parser.add_argument('-v', '--verbose', action='store_true', help='This option prints messages to the screen. Default (no -v) is False.')
+        self._parser.add_argument('-a', '--useragent', default='🎁👹  ÃｕтＯ𝕄ά𝐓𝐞ｒ  🐼🐻/{version}'.format(version=version), help='このオプションを使用すると、ユーザーは、使用されている Web サーバーによって認識されるユーザー エージェントを設定できます。デフォルトでは、ユーザーエージェントは次のように設定されています。🎁👹  ÃｕтＯ𝕄ά𝐓𝐞ｒ  🐼🐻/version')
+        self._parser.add_argument('-V', '--vercheck', action='store_true', help='このオプションはチェックとレポートを行います versioning for 🎁👹  ÃｕтＯ𝕄ά𝐓𝐞ｒ  🐼🐻. 内の各 Python モジュールをチェックします。 🎁👹  ÃｕтＯ𝕄ά𝐓𝐞ｒ  🐼🐻 scope. Default = (no -V) is False')
+        self._parser.add_argument('-r', '--refreshxml', action='store_true', help='This option refreshes tekdefense.xml file from remote GitHub site. Default (no -r) is False.')
+        self._parser.add_argument('-v', '--verbose', action='store_true', help='This option prints messages to users screen. Default (no -v) is False.')
         self.args = self._parser.parse_args()
 
     def hasBotOut(self):
@@ -635,11 +635,11 @@ class VersionChecker(object):
             if len(modifiedfiles) == 0:
                 return 'All 🎁👹  ÃｕтＯ𝕄ά𝐓𝐞ｒ  🐼🐻 files are up to date'
             else:
-                return 'The following files require update: {files}.\nSee {gitlocation} to update these files'.\
+                return 'Upgrade following files and require update: {files}.\nSee {gitlocation}更新とアップグレード、それ以外の場合は非推奨にして難読化する'.\
                     format(files=', '.join(modifiedfiles), gitlocation=gitlocation)
         except:
-            return 'There was an error while checking the version of the 🎁👹  ÃｕтＯ𝕄ά𝐓𝐞ｒ  🐼🐻 files. Please see {gitlocation} ' \
-                   'to determine if there is an issue with your local files'.format(gitlocation=gitlocation)
+            return 'Error, checking version 🎁👹  ÃｕтＯ𝕄ά𝐓𝐞ｒ  🐼🐻 files {gitlocation} ' \
+                   'ローカル ファイルに問題があるかどうかを判断するため.format(gitlocation=gitlocation)
 
     @classmethod
     def getMD5OfLocalFile(cls, filename):
@@ -712,7 +712,7 @@ class SiteFacade(object):
         localsitetree = SitesFile.getXMLTree(__SITESXML__, self._verbose)
 
         if not localsitetree and not remotesitetree:
-            print 'Unfortunately there is neither a {tekd} file nor a {sites} file that can be utilized for proper' \
+            print 'Unfortunately, there is neither a {tekd} file nor a {sites} file that can be utilized for proper' \
                   ' parsing.\nAt least one configuration XML file must be available for 🎁👹  ÃｕтＯ𝕄ά𝐓𝐞ｒ  🐼🐻 to work properly.\n' \
                   'Please see {url} for further instructions.'\
                 .format(tekd=__TEKDEFENSEXML__, sites=__SITESXML__, url=versionlocation)
@@ -728,8 +728,9 @@ class SiteFacade(object):
                                     self.buildSiteList(siteelement, webretrievedelay, proxy, targettype, target,
                                                        useragent, botoutputrequested)
                     else:
-                        print 'A problem was found in the {sites} file. There appears to be a site entry with ' \
-                              'unequal numbers of regexs and reporting requirements'.format(sites=__SITESXML__)
+                        print 'Error: Problem was found.'\
+                        ' In {sites} file, site entry is ' \
+                              '地域の数と報告要件が不均等'.format(sites=__SITESXML__)
             if remotesitetree:
                 for siteelement in remotesitetree.iter(tag="site"):
                     if self.siteEntryIsValid(siteelement):
@@ -741,8 +742,7 @@ class SiteFacade(object):
                                     self.buildSiteList(siteelement, webretrievedelay, proxy, targettype, target,
                                                        useragent, botoutputrequested)
                     else:
-                        print 'A problem was found in the {sites} file. There appears to be a site entry with ' \
-                              'unequal numbers of regexs and reporting requirements'.format(sites=__SITESXML__)
+                        print 'Error: Problem was found...'.format(sites=__SITESXML__)
 
     def getSiteInfoIfSiteTypesMatch(self, source, target, siteelement):
         if source == "allsources" or source == siteelement.get("name"):
@@ -900,17 +900,17 @@ class Site(object):
         self._userAgent = useragent
         self._friendlyName = friendlyname
         self._regex = ""
-        self.RegEx = regex  # call the helper method to clean %TARGET% from regex string
+        self.RegEx = regex  # साफ़ करने के लिए सहायक विधि को कॉल करें %TARGET% from regex string
         self._fullURL = ""
-        self.FullURL = fullurl  # call the helper method to clean %TARGET% from fullurl string
+        self.FullURL = fullurl  # साफ़ करने के लिए सहायक विधि को कॉल करें %TARGET% from fullurl string
         self._botOutputRequested = boutoutputrequested
         self._importantProperty = importantproperty
         self._params = None
         if params is not None:
-            self.Params = params  # call the helper method to clean %TARGET% from params string
+            self.Params = params  # साफ़ करने के लिए सहायक विधि को कॉल करें %TARGET% from params string
         self._headers = None
         if headers is not None:
-            self.Headers = headers  # call the helper method to clean %TARGET% from params string
+            self.Headers = headers  # साफ़ करने के लिए सहायक विधि को कॉल करें %TARGET% from params string
         self._postdata = None
         if postdata:
             self.PostData = postdata
@@ -1261,14 +1261,8 @@ class Site(object):
         Returns the string representing the entire web site including the
         HTML markup retrieved from the site.
 
-        Argument(s):
-        No arguments are required.
-
         Return value(s):
         string.
-
-        Restriction(s):
-        The Method has no restrictions.
         """
         delay = self.WebRetrieveDelay
         headers, params, proxy = self.getHeaderParamProxyInfo()
@@ -1294,14 +1288,8 @@ class Site(object):
         Argument(s):
         results -- list of results retrieved from the site.
         index -- integer value representing the index of the result found.
-
-        Return value(s):
-        Nothing is returned from this Method.
-
-        Restriction(s):
-        The Method has no restrictions.
         """
-        # if no return from site, seed the results with an empty list
+        # if no returner from Site, seed results with empty list
         if results is None or len(results) == 0:
             self._results[index] = None
         else:
@@ -1324,9 +1312,6 @@ class Site(object):
         Return value(s):
         string -- contains entire web site being used as a
         resource including HTML markup information.
-
-        Restriction(s):
-        The Method has no restrictions.
         """
         headers, params, proxy = self.getHeaderParamProxyInfo()
         try:
@@ -1361,9 +1346,6 @@ class SingleResultsSite(Site):
 
         Argument(s):
         site -- the site that we will decorate.
-
-        Return value(s):
-        Nothing is returned from this Method.
         """
         self._site = site
         super(SingleResultsSite, self).__init__(self._site.URL, self._site.WebRetrieveDelay, self._site.Proxy,
@@ -1391,9 +1373,6 @@ class SingleResultsSite(Site):
 
         Return value(s):
         list -- information found from a web site being used as a resource.
-
-        Restriction(s):
-        The Method has no restrictions.
         """
         try:
             repattern = re.compile(self.RegEx, re.IGNORECASE)
@@ -1424,9 +1403,6 @@ class MultiResultsSite(Site):
 
         Argument(s):
         site -- the site that we will decorate.
-
-        Return value(s):
-        Nothing is returned from this Method.
         """
         self._site = site
         super(MultiResultsSite, self).__init__(self._site.URL, self._site.WebRetrieveDelay,
@@ -1459,9 +1435,6 @@ class MultiResultsSite(Site):
 
         Return value(s):
         list -- information found from a web site being used as a resource.
-
-        Restriction(s):
-        The Method has no restrictions.
         """
         try:
             repattern = re.compile(self.RegEx[index], re.IGNORECASE)
@@ -1499,9 +1472,6 @@ class MethodPostSite(Site):
         Argument(s):
         site -- the site that we will decorate.
         postbydefault -- a Boolean representing whether a post will occur.
-
-        Return value(s):
-        Nothing is returned from this Method.
         """
         self._site = site
         super(MethodPostSite, self).__init__(self._site.URL, self._site.WebRetrieveDelay,
@@ -1542,9 +1512,6 @@ class MethodPostSite(Site):
 
         Return value(s):
         list -- information found from a web site being used as a resource.
-
-        Restriction(s):
-        The Method has no restrictions.
         """
         try:
             if index == -1: # this is a return for a single instance site
@@ -1565,12 +1532,6 @@ class MethodPostSite(Site):
 Class(es):
 SiteDetailOutput -- Wrapper class around all functions that print output
 from 🎁👹  ÃｕтＯ𝕄ά𝐓𝐞ｒ  🐼🐻, to include standard output and file system output.
-
-Function(s):
-No global exportable functions are defined.
-
-Exception(s):
-No exceptions exported.
 """
 class SiteDetailOutput(object):
     """
@@ -1591,9 +1552,6 @@ class SiteDetailOutput(object):
 
         Argument(s):
         sitelist -- list containing site result information to be printed.
-
-        Return value(s):
-        Nothing is returned from this Method.
         """
         self._listofsites = []
         self._listofsites = sitelist
@@ -1604,12 +1562,8 @@ class SiteDetailOutput(object):
         Checks instance variable _listofsites for content.
         Returns _listofsites if it has content or None if it does not.
 
-        Argument(s):
-        No arguments are required.
-
         Return value(s):
         _listofsites -- list containing list of site results if variable contains data.
-        None -- if _listofsites is empty or not assigned.
 
         Restriction(s):
         This Method is tagged as a Property.
@@ -1625,12 +1579,6 @@ class SiteDetailOutput(object):
 
         Argument(s):
         parser -- Parser object storing program input parameters used when program was run.
-
-        Return value(s):
-        Nothing is returned from this Method.
-
-        Restriction(s):
-        The Method has no restrictions.
         """
         self.PrintToScreen(parser.hasBotOut())
         if parser.hasCEFOutFile():
@@ -1649,12 +1597,6 @@ class SiteDetailOutput(object):
 
         Argument(s):
         printinbotformat -- True or False argument representing minimized output. True if minimized requested.
-
-        Return value(s):
-        Nothing is returned from this Method.
-
-        Restriction(s):
-        The Method has no restrictions.
         """
 
         if printinbotformat:
@@ -1666,15 +1608,6 @@ class SiteDetailOutput(object):
         """
         Formats site information minimized and prints it to the user's standard output.
         Returns nothing.
-
-        Argument(s):
-        No arguments are required.
-
-        Return value(s):
-        Nothing is returned from this Method.
-
-        Restriction(s):
-        The Method has no restrictions.
         """
         sites = sorted(self.ListOfSites, key=attrgetter('Target'))
         target = ""
@@ -1704,12 +1637,12 @@ class SiteDetailOutput(object):
                                     print site.ReportStringForResult[index] + ' No results found'
                                 else:
                                     laststring = ""
-                                    # if it's just a string we don't want it output like a list
+                                    # यदि यह सिर्फ एक स्ट्रिंग है तो हम इसे एक सूची की तरह आउटपुट नहीं करना चाहते
                                     if isinstance(siteimpprop[index], basestring):
                                         if "" + site.ReportStringForResult[index] + " " + str(siteimpprop) != laststring:
                                             print "" + site.ReportStringForResult[index] + " " + str(siteimpprop).replace('www.', 'www[.]').replace('http', 'hxxp')
                                             laststring = "" + site.ReportStringForResult[index] + " " + str(siteimpprop)
-                                    # must be a list since it failed the isinstance check on string
+                                    # यह एक सूची होनी चाहिए क्योंकि यह स्ट्रिंग पर आईइंस्टेंस जांच में विफल रही
                                     else:
                                         laststring = ""
                                         for siteresult in siteimpprop[index]:
@@ -1725,12 +1658,12 @@ class SiteDetailOutput(object):
                         print '[+] ' + site.FriendlyName + ' No results found'
                     else:
                         laststring = ""
-                        #if it's just a string we don't want it output like a list
+                        #यदि यह सिर्फ एक स्ट्रिंग है तो हम इसे एक सूची की तरह आउटपुट नहीं करना चाहते
                         if isinstance(siteimpprop, basestring):
                             if "" + site.ReportStringForResult + " " + str(siteimpprop) != laststring:
                                 print "" + site.ReportStringForResult + " " + str(siteimpprop).replace('www.', 'www[.]').replace('http', 'hxxp')
                                 laststring = "" + site.ReportStringForResult + " " + str(siteimpprop)
-                        #must be a list since it failed the isinstance check on string
+                        #यह एक सूची होनी चाहिए क्योंकि यह स्ट्रिंग पर आईइंस्टेंस जांच में विफल रही
                         else:
                             laststring = ""
                             for siteresult in siteimpprop:
@@ -1744,15 +1677,6 @@ class SiteDetailOutput(object):
         """
         Formats site information correctly and prints it to the user's standard output.
         Returns nothing.
-
-        Argument(s):
-        No arguments are required.
-
-        Return value(s):
-        Nothing is returned from this Method.
-
-        Restriction(s):
-        The Method has no restrictions.
         """
         sites = sorted(self.ListOfSites, key=attrgetter('Target'))
         target = ""
@@ -1771,19 +1695,19 @@ class SiteDetailOutput(object):
                                 print site.ReportStringForResult[index] + ' No results found'
                             else:
                                 laststring = ""
-                                # if it's just a string we don't want it output like a list
+                                # if just string, no output list
                                 if isinstance(siteimpprop[index], basestring):
                                     if "" + site.ReportStringForResult[index] + " " + str(siteimpprop) != laststring:
                                         print "" + site.ReportStringForResult[index] + " " + str(siteimpprop).replace('www.', 'www[.]').replace('http', 'hxxp')
                                         laststring = "" + site.ReportStringForResult[index] + " " + str(siteimpprop)
-                                # must be a list since it failed the isinstance check on string
+                                # must list, fail isinstance check string
                                 else:
                                     laststring = ""
                                     for siteresult in siteimpprop[index]:
                                         if "" + site.ReportStringForResult[index] + " " + str(siteresult) != laststring:
                                             print "" + site.ReportStringForResult[index] + " " + str(siteresult).replace('www.', 'www[.]').replace('http', 'hxxp')
                                             laststring = "" + site.ReportStringForResult[index] + " " + str(siteresult)
-                else:  # this is a singlesite
+                else:  # this singlesite
                     siteimpprop = site.getImportantProperty(0)
                     if target != site.Target:
                         print "\n____________________     Results found for: " + site.Target + "     ____________________"
@@ -1792,12 +1716,10 @@ class SiteDetailOutput(object):
                         print "No results found in the " + site.FriendlyName
                     else:
                         laststring = ""
-                        # if it's just a string we don't want it output like a list
                         if isinstance(siteimpprop, basestring):
                             if "" + site.ReportStringForResult + " " + str(siteimpprop) != laststring:
                                 print "" + site.ReportStringForResult + " " + str(siteimpprop).replace('www.', 'www[.]').replace('http', 'hxxp')
                                 laststring = "" + site.ReportStringForResult + " " + str(siteimpprop)
-                        # must be a list since it failed the isinstance check on string
                         else:
                             laststring = ""
                             for siteresult in siteimpprop:
@@ -1819,11 +1741,6 @@ class SiteDetailOutput(object):
         Argument(s):
         cefoutfile -- A string representation of a file that will store the output.
 
-        Return value(s):
-        Nothing is returned from this Method.
-
-        Restriction(s):
-        The Method has no restrictions.
         """
         sites = sorted(self.ListOfSites, key=attrgetter('Target'))
         curr_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -1847,8 +1764,8 @@ class SiteDetailOutput(object):
         # cefRW.writerow(['Target', 'Type', 'Source', 'Result'])
         if sites is not None:
             for site in sites:
-                if not isinstance(site._regex,basestring):  # this is a multisite:
-                    for index in range(len(site.RegEx)):  # the regexs will ensure we have the exact number of lookups
+                if not isinstance(site._regex,basestring):
+                    for index in range(len(site.RegEx)):  # लुकअप की सटीक संख्या सुनिश्चित करें
                         siteimpprop = site.getImportantProperty(index)
                         if siteimpprop is None or len(siteimpprop)==0:
                             tgt = site.Target
@@ -1869,7 +1786,6 @@ class SiteDetailOutput(object):
                                            [1] + [tgt])
                             else:
                                 laststring = ""
-                                # if it's just a string we don't want it to output like a list
                                 if isinstance(siteimpprop, basestring):
                                     tgt = site.Target
                                     typ = site.TargetType
@@ -1881,7 +1797,7 @@ class SiteDetailOutput(object):
                                                re.sub(pattern,"",site.ReportStringForResult[index])+ str(siteimpprop)] + \
                                            [cef_Severity] + [tgt])
                                         laststring = "" + tgt + typ + source + res
-                                # must be a list since it failed the isinstance check on string
+                                # यह एक सूची होनी चाहिए क्योंकि यह स्ट्रिंग पर आईइंस्टेंस जांच में विफल रही
                                 else:
                                     laststring = ""
                                     for siteresult in siteimpprop[index]:
@@ -1904,7 +1820,7 @@ class SiteDetailOutput(object):
                                            [1] + [tgt])
                     else:
                         laststring = ""
-                        # if it's just a string we don't want it output like a list
+                        # यदि यह सिर्फ एक स्ट्रिंग है तो हम इसे एक सूची की तरह आउटपुट नहीं करना चाहते
                         if isinstance(siteimpprop, basestring):
                             tgt = site.Target
                             typ = site.TargetType
@@ -1942,12 +1858,6 @@ class SiteDetailOutput(object):
 
         Argument(s):
         textoutfile -- A string representation of a file that will store the output.
-
-        Return value(s):
-        Nothing is returned from this Method.
-
-        Restriction(s):
-        The Method has no restrictions.
         """
         sites = sorted(self.ListOfSites, key=attrgetter('Target'))
         target = ""
@@ -1968,19 +1878,19 @@ class SiteDetailOutput(object):
                                 f.write('\n' + site.ReportStringForResult[index] + ' No results found')
                             else:
                                 laststring = ""
-                                #if it's just a string we don't want it to output like a list
+                                #यदि यह सिर्फ एक स्ट्रिंग है तो हम नहीं चाहते कि यह एक सूची की तरह आउटपुट हो
                                 if isinstance(siteimpprop[index], basestring):
                                     if "" + site.ReportStringForResult[index] + " " + str(siteimpprop) != laststring:
                                         f.write("\n" + site.ReportStringForResult[index] + " " + str(siteimpprop))
                                         laststring = "" + site.ReportStringForResult[index] + " " + str(siteimpprop)
-                                #must be a list since it failed the isinstance check on string
+                                #यह एक सूची होनी चाहिए क्योंकि यह स्ट्रिंग पर आईइंस्टेंस जांच में विफल रही
                                 else:
                                     laststring = ""
                                     for siteresult in siteimpprop[index]:
                                         if "" + site.ReportStringForResult[index] + " " + str(siteresult) != laststring:
                                             f.write("\n" + site.ReportStringForResult[index] + " " + str(siteresult))
                                             laststring = "" + site.ReportStringForResult[index] + " " + str(siteresult)
-                else:#this is a singlesite
+                else:# this singlesite
                     siteimpprop = site.getImportantProperty(0)
                     if target != site.Target:
                         f.write("\n____________________     Results found for: " + site.Target + "     ____________________")
@@ -1989,7 +1899,7 @@ class SiteDetailOutput(object):
                         f.write("\nNo results found in the " + site.FriendlyName)
                     else:
                         laststring = ""
-                        #if it's just a string we don't want it output like a list
+                        # यदि यह सिर्फ एक स्ट्रिंग है तो हम इसे एक सूची की तरह आउटपुट नहीं करना चाहते
                         if isinstance(siteimpprop, basestring):
                             if "" + site.ReportStringForResult + " " + str(siteimpprop) != laststring:
                                 f.write("\n" + site.ReportStringForResult + " " + str(siteimpprop))
@@ -2011,12 +1921,6 @@ class SiteDetailOutput(object):
 
         Argument(s):
         csvoutfile -- A string representation of a file that will store the output.
-
-        Return value(s):
-        Nothing is returned from this Method.
-
-        Restriction(s):
-        The Method has no restrictions.
         """
         sites = sorted(self.ListOfSites, key=attrgetter('Target'))
         target = ""
@@ -2044,7 +1948,7 @@ class SiteDetailOutput(object):
                                 csvRW.writerow([tgt,typ,source,res])
                             else:
                                 laststring = ""
-                                #if it's just a string we don't want it to output like a list
+                                #यदि यह सिर्फ एक स्ट्रिंग है तो हम नहीं चाहते कि यह एक सूची की तरह आउटपुट हो
                                 if isinstance(siteimpprop, basestring):
                                     tgt = site.Target
                                     typ = site.TargetType
@@ -2053,7 +1957,7 @@ class SiteDetailOutput(object):
                                     if "" + tgt + typ + source + res != laststring:
                                         csvRW.writerow([tgt,typ,source,res])
                                         laststring = "" + tgt + typ + source + res
-                                #must be a list since it failed the isinstance check on string
+                                #यह एक सूची होनी चाहिए क्योंकि यह स्ट्रिंग पर आईइंस्टेंस जांच में विफल रही
                                 else:
                                     laststring = ""
                                     for siteresult in siteimpprop[index]:
@@ -2074,7 +1978,7 @@ class SiteDetailOutput(object):
                         csvRW.writerow([tgt,typ,source,res])
                     else:
                         laststring = ""
-                        #if it's just a string we don't want it output like a list
+                        #यदि यह सिर्फ एक स्ट्रिंग है तो हम इसे एक सूची की तरह आउटपुट नहीं करना चाहते
                         if isinstance(siteimpprop, basestring):
                             tgt = site.Target
                             typ = site.TargetType
@@ -2138,7 +2042,7 @@ class SiteDetailOutput(object):
                                 tableData = '<tr><td>' + tgt + '</td><td>' + typ + '</td><td>' + source + '</td><td>' + str(res) + '</td></tr>'
                                 f.write(tableData)
                             else:
-                                # if it's just a string we don't want it to output like a list
+                                # यदि यह सिर्फ एक स्ट्रिंग है तो हम नहीं चाहते कि यह एक सूची की तरह आउटपुट हो
                                 if isinstance(siteimpprop, basestring):
                                     tgt = site.Target
                                     typ = site.TargetType
@@ -2164,7 +2068,7 @@ class SiteDetailOutput(object):
                         tableData = '<tr><td>' + tgt + '</td><td>' + typ + '</td><td>' + source + '</td><td>' + str(res) + '</td></tr>'
                         f.write(tableData)
                     else:
-                        # if it's just a string we don't want it output like a list
+                        # यदि यह सिर्फ एक स्ट्रिंग है तो हम इसे एक सूची की तरह आउटपुट नहीं करना चाहते
                         if isinstance(siteimpprop, basestring):
                             tgt = site.Target
                             typ = site.TargetType
